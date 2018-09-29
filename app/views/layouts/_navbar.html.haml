@@ -11,6 +11,6 @@
       .container
         .collapse.navbar-collapse#bs-example-navbar-collapse-1
           %ul.nav.navbar-nav.navbar-right
-            %li.active= link_to 'Link 1', '#'
-            %li= link_to 'Link 2', '#'
-            %li= link_to 'Link 3', '#'
+            %li.lifty-button{ class: ( controller?('misc') && action?('home') ? 'active' : '' ) }= link_to 'Home', root_path
+            %li.lifty-button{ class: ( controller?('misc') && action?('about') ? 'active' : '' ) }= link_to 'About', '#'
+            %li.lifty-button{ class: ( controller?('misc') && action?('contact') ? 'active' : '' ) }= link_to 'Contact', '#'
