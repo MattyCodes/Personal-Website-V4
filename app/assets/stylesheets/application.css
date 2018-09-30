@@ -36,6 +36,7 @@ h5 {
   letter-spacing: 0.5px;
   word-spacing: 0.5px;
   margin-top: 10px;
+  z-index: 1;
 }
 
 .navbar-default .navbar-brand {
@@ -93,6 +94,8 @@ h5 {
   transform-origin: 0;
   background: linear-gradient(150deg,#4dd18e 15%,#6BF2F9 70%,#51e0e0 94%);
   position: absolute;
+  z-index: 0;
+  top: 0;
 }
 
 #background-tiles > span {
@@ -234,27 +237,147 @@ h5 {
   }
 }
 
-#flippy-skills-panel {
+.full-width {
+  width: 100%;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.top-margin-sm {
+  margin-top: 15px;
+}
+
+.top-margin-md {
+  margin-top: 25px;
+}
+
+.top-margin-lg {
+  margin-top: 33px;
+}
+
+.bottom-margin-sm {
+  margin-bottom: 15px;
+}
+
+.bottom-margin-md {
+  margin-bottom: 25px;
+}
+
+.bottom-margin-lg {
+  margin-bottom: 33px;
+}
+
+.right-margin-sm {
+  margin-right: 15px;
+}
+
+.right-margin-md {
+  margin-right: 25px;
+}
+
+.right-margin-sm {
+  margin-right: 33px;
+}
+
+.left-margin-sm {
+  margin-left: 15px;
+}
+
+.left-margin-sm {
+  margin-left: 25px;
+}
+
+.left-margin-sm {
+  margin-left: 33px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.top-padding-sm {
+  padding-top: 15px;
+}
+
+.top-padding-md {
+  padding-top: 25px;
+}
+
+.top-padding-lg {
+  padding-top: 33px;
+}
+
+.bottom-padding-sm {
+  padding-bottom: 15px;
+}
+
+.bottom-padding-md {
+  padding-bottom: 25px;
+}
+
+.bottom-padding-lg {
+  padding-bottom: 33px;
+}
+
+.right-padding-sm {
+  padding-right: 15px;
+}
+
+.right-padding-md {
+  padding-right: 25px;
+}
+
+.right-padding-sm {
+  padding-right: 33px;
+}
+
+.left-padding-sm {
+  padding-left: 15px;
+}
+
+.left-padding-sm {
+  padding-left: 25px;
+}
+
+.left-padding-sm {
+  padding-left: 33px;
+}
+
+.home-header {
+  font-weight: 600;
+  font-family: 'Quicksand';
+  font-size: 35px;
+  color: #F5F5F5;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  margin-top: 90px;
+  line-height: 45px;
+}
+
+.blinking-cursor {
+  opacity: 0;
+  animation: disappear 400ms linear 0s infinite alternate;
+  display: inline-block;
+  width: 2px;
+  height: 25px;
+  background: #eaeaea;
+  vertical-align: top;
   position: absolute;
-  right: -45px;
-  top: 275px;
-  width: 400px;
-  min-height: 290px;
-  transform: rotate(-10deg);
-  box-shadow: 0px 0px 10px #00000021;
-  transition: all 250ms;
-  border: 1px solid #dcdcdc;
-  border-radius: 10px;
+  margin-left: 5px;
 }
 
-@media screen and (max-width: 991px) {
-  #flippy-skills-panel {
-    right: -110px;
-  }
+@keyframes disappear {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-@media screen and (max-width: 767px) {
-  #flippy-skills-panel {
-    opacity: 0;
-  }
+.home-subheader {
+  color: #F5F5F5;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  padding-left: 3px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
 }
