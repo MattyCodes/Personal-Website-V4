@@ -6,4 +6,8 @@ module ApplicationHelper
   def action?(name)
     params[:action].downcase == name.downcase
   end
+
+  def navbar_hidden?
+    controller?('misc') && action?('thanks')
+  end
 end
