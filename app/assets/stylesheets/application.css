@@ -99,11 +99,11 @@ h5 {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  -webkit-transform: skewY(-16deg);
-  transform: skewY(-16deg);
+  -webkit-transform: skewY(-14deg);
+  transform: skewY(-14deg);
   -webkit-transform-origin: 0;
   transform-origin: 0;
-  background: linear-gradient(150deg,#4dd18e 15%,#6BF2F9 70%,#51e0e0 94%);
+  background: linear-gradient(150deg,#4dd18e 15%,#6bf9e5 70%,#51e0d3 94%);
   position: absolute;
   z-index: 0;
   top: 0;
