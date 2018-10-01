@@ -8,6 +8,6 @@ module ApplicationHelper
   end
 
   def navbar_hidden?
-    controller?('misc') && action?('thanks')
+    ( controller?('misc') && action?('thanks') ) || ( controller?('misc') && action?('contact') )
   end
 end

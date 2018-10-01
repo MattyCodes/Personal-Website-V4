@@ -37,15 +37,17 @@ class ChangingWords extends React.Component {
     currentValue += fullWord[indexOfNextLetter];
 
     setTimeout(function() {
-      self.setState({ currentValue: currentValue }, function() {
-        if ( currentValue.length >= fullWord.length ) {
-          setTimeout(function() {
-            self.removeLetters();
-          }, 1000);
-        } else {
-          self.addLetters();
-        };
-      });
+      if (self.refs.mounted) {
+        self.setState({ currentValue: currentValue }, function() {
+          if ( currentValue.length >= fullWord.length ) {
+            setTimeout(function() {
+              self.removeLetters();
+            }, 1000);
+          } else {
+            self.addLetters();
+          };
+        });
+      };
     }, 150);
   };
 
@@ -59,18 +61,20 @@ class ChangingWords extends React.Component {
     let self         = this;
 
     setTimeout(function() {
-      self.setState({ currentValue: nextValue }, function() {
-        if ( nextValue.length == 0 ) {
-          nextWord = ( index == words.length ? words[0] : words[index] );
-          self.setState({ currentWord: nextWord }, function() {
-            setTimeout(function() {
-              self.addLetters();
-            }, 800);
-          });
-        } else {
-          self.removeLetters();
-        }
-      });
+      if (self.refs.mounted) {
+        self.setState({ currentValue: nextValue }, function() {
+          if ( nextValue.length == 0 ) {
+            nextWord = ( index == words.length ? words[0] : words[index] );
+            self.setState({ currentWord: nextWord }, function() {
+              setTimeout(function() {
+                self.addLetters();
+              }, 800);
+            });
+          } else {
+            self.removeLetters();
+          }
+        });
+      };
     }, 150);
   };
 
