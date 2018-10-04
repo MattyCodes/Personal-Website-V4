@@ -531,10 +531,29 @@ h5 {
 }
 
 .tile-primary-image:hover {
-  filter: brightness(90%);
+  filter: brightness(95%);
 }
 
 .tile-primary-image:hover,
 .tile-primary-image.active {
   border-color: #4dd18e;
+}
+
+.tile-bottom-section {
+  margin: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  transition: all 350ms;
+}
+
+.tile-bottom-section.active {
+  background: #c5c5c538;
+  height: 400px;
+  overflow: auto;
+  border: 2px solid #cdcdcd;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0px 5px 15px #0000001f;
 }
