@@ -372,27 +372,6 @@ h5 {
   padding-left: 33px;
 }
 
-.home-header {
-  font-weight: 600;
-  font-family: 'Quicksand';
-  font-size: 35px;
-  color: #F5F5F5;
-  letter-spacing: 0.5px;
-  word-spacing: 1px;
-  margin-top: 90px;
-  line-height: 45px;
-}
-
-@media screen and (max-width: 600px) {
-  .home-header {
-    font-size: 25px;
-  }
-
-  .home-subheader {
-    font-size: 18px;
-  }
-}
-
 .blinking-cursor {
   opacity: 0;
   animation: disappear 400ms linear 0s infinite alternate;
@@ -408,15 +387,6 @@ h5 {
 @keyframes disappear {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-.home-subheader {
-  color: #F5F5F5;
-  letter-spacing: 0.5px;
-  word-spacing: 1px;
-  padding-left: 3px;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 22px;
 }
 
 #navbar-background {
@@ -465,6 +435,22 @@ h5 {
   transform: skew(55deg) rotate(-2deg);
 }
 
+.down-arrow {
+  max-width: 75px;
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+.down-arrow:hover {
+  transform: scale(1.075);
+}
+
+
+
+/* Styles to Move to Separate Files  */
+
+
+
 .about-header {
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
@@ -475,6 +461,7 @@ h5 {
   border-bottom: 3px solid #4dd1ac;
   padding: 20px 45px;
   width: fit-content;
+  text-shadow: 0px 0px 15px #00000014;
 }
 
 .about-text {
@@ -485,6 +472,7 @@ h5 {
   line-height: 40px;
   padding: 10px 35px;
   max-width: 900px;
+  text-shadow: 0px 0px 15px #00000014;
 }
 
 @media screen and (max-width: 600px) {
@@ -500,18 +488,53 @@ h5 {
   }
 }
 
-.down-arrow {
-  max-width: 100px;
-  cursor: pointer;
-  transition: all 250ms;
+.home-subheader {
+  color: #F5F5F5;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  padding-left: 3px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
 }
 
-.down-arrow:hover {
-  transform: scale(1.075);
+.home-header {
+  font-weight: 600;
+  font-family: 'Quicksand';
+  font-size: 35px;
+  color: #F5F5F5;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  margin-top: 90px;
+  line-height: 45px;
 }
 
-@media screen and (max-width: 767px) {
-  .down-arrow {
-    max-width: 75px;
+@media screen and (max-width: 600px) {
+  .home-header {
+    font-size: 25px;
   }
+
+  .home-subheader {
+    font-size: 18px;
+  }
+}
+
+.tile-primary-image {
+  height: 315px;
+  width: 100%;
+  object-fit: cover;
+  transition: all 300ms;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px #0000002e;
+  border: 4px solid #d0d0d0;
+  box-sizing: content-box;
+}
+
+.tile-primary-image:hover {
+  filter: brightness(90%);
+}
+
+.tile-primary-image:hover,
+.tile-primary-image.active {
+  border-color: #4dd18e;
 }

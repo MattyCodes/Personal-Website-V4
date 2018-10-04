@@ -1,7 +1,10 @@
 = render partial: 'layouts/navbar_background'
 .container
   .row
-    .col-sm-12.col-md-12.col-lg-12.text-center.top-margin-lg
+    .col-sm-12.col-md-12.col-lg-12.text-center.top-margin-lg.bottom-margin-lg
       %h3.about-header.margin-center.top-margin-sm About Me
-      %p.about-text I am a full-stack web developer with experience using a variety of technologies. When I was eighteen I attended Dev Bootcamp, an immersive code-school, in order to fast-track my career in web development. Since graduating, I have constantly occupied myself with engaging and challenging projects.
+      %p.about-text.bottom-margin-sm Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       = image_tag 'down_arrow.png', class: 'down-arrow top-margin-lg', id: 'scroll-from'
+  .row
+    .col-sm-12.col-md-12.col-lg-12.top-margin-lg.bottom-margin-lg.top-padding-md#scroll-to
+      = react_component('InformationalTilesList', { listData: @list_data })
