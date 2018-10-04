@@ -48,7 +48,7 @@ class ChangingWords extends React.Component {
           };
         });
       };
-    }, 150);
+    }, 125);
   };
 
   removeLetters() {
@@ -75,7 +75,7 @@ class ChangingWords extends React.Component {
           }
         });
       };
-    }, 150);
+    }, 125);
   };
 
   render () {
