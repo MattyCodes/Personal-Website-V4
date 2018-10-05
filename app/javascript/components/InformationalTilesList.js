@@ -38,7 +38,10 @@ class InformationalTilesList extends React.Component {
       divClass   = ( active ? 'active' : '' );
 
       col        = (
-        <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 bottom-margin-md text-center" key={ `tile-list-item-${index}` }>
+        <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding no-margin text-center" key={ `tile-list-item-${index}` }>
+          <div className="tile-overlay" onClick={ () => self.openTile(index) }>
+            <span> { data.title } </span>
+          </div>
           <img
             src={ data.primaryImage }
             className={ `tile-primary-image ${divClass}` }

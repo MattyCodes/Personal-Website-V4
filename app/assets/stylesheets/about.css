@@ -35,25 +35,66 @@
   }
 }
 
+.tile-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F5F5F5;
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  word-spacing: 1.5px;
+  background: #0000008f;
+  opacity: 0;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.tile-primary-image:hover + .tile-overlay,
+.tile-overlay:hover {
+  opacity: 1;
+}
+
 .tile-primary-image {
-  height: 315px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
   transition: all 300ms;
   cursor: pointer;
-  border-radius: 8px;
   box-shadow: 0px 0px 15px #0000002e;
-  border: 4px solid #d0d0d0;
   box-sizing: content-box;
 }
 
-.tile-primary-image:hover {
-  filter: brightness(95%);
+@media screen and (max-width: 767px) {
+  .tile-primary-image {
+    height: 200px;
+  }
+
+  div.tile-bottom-section.active {
+    height: 300px;
+  }
+
+  .tile-overlay,
+  .tile-overlay:hover {
+    font-size: 22px;
+  }
 }
 
-.tile-primary-image:hover,
-.tile-primary-image.active {
-  border-color: #4dd18e;
+@media screen and (max-width: 600px) {
+  .tile-primary-image {
+    height: 150px;
+  }
+
+  .tile-overlay,
+  .tile-overlay:hover {
+    font-size: 15px;
+  }
 }
 
 .tile-bottom-section {
@@ -66,48 +107,9 @@
 }
 
 .tile-bottom-section.active {
-  background: #c5c5c538;
+  background: #86898669;
   height: 400px;
   overflow: auto;
-  border: 2px solid #cdcdcd;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  margin-top: 8px;
+  border: 2px solid #9e9e9e;
   box-shadow: 0px 5px 15px #0000001f;
-}
-
-.tile-bottom-section:before {
-  opacity: 0;
-  transition: all 350ms;
-}
-
-.tile-bottom-section.active:before {
-  content: " ";
-  position: absolute;
-  z-index: 5;
-  top: -15px;
-  width: 0;
-  height: 0;
-  opacity: 1;
-  border-left: 22px solid transparent;
-  border-right: 22px solid transparent;
-  border-bottom: 24px solid #cdcdcd;
-}
-
-.tile-bottom-section.active.left:before {
-  left: 150px;
-}
-
-.tile-bottom-section.active.right:before {
-  right: 150px;
-}
-
-@media screen and (max-width: 767px) {
-  .tile-bottom-section.active.left:before {
-    left: 100px;
-  }
-
-  .tile-bottom-section.active.right:before {
-    right: 100px;
-  }
 }

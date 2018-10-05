@@ -13,23 +13,23 @@ class MiscController < ApplicationController
 
     @list_data = [
       {
+        title: "This is a Test Title",
         primaryImage: ActionController::Base.helpers.image_path('macho_entrance.jpg'),
-        secondaryImage: ActionController::Base.helpers.image_path('macho_comic.jpg'),
         description: test_text
       },
       {
+        title: "This is a Test Title",
         primaryImage: ActionController::Base.helpers.image_path('stark_wallpaper.png'),
-        secondaryImage: ActionController::Base.helpers.image_path('stark_banner.jpg'),
         description: test_text
       },
       {
+        title: "This is a Test Title",
         primaryImage: ActionController::Base.helpers.image_path('wu_tang_wallpaper.jpg'),
-        secondaryImage: ActionController::Base.helpers.image_path('wu_tang_logo.png'),
         description: test_text
       },
       {
+        title: "This is a Test Title",
         primaryImage: ActionController::Base.helpers.image_path('deadpool_wallpaper.jpg'),
-        secondaryImage: ActionController::Base.helpers.image_path('deadpool.jpg'),
         description: test_text
       }
     ]
