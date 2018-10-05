@@ -25,6 +25,7 @@ class InformationalTilesList extends React.Component {
     let bottomOne = null;
     let bottomTwo = null;
     let active    = null;
+    let side      = '';
     let divClass  = '';
     let self      = this;
     let tiles     = [];
@@ -32,11 +33,12 @@ class InformationalTilesList extends React.Component {
     let col       = null;
 
     this.props.listData.map(function(data, index) {
+      side       = ( index % 2 == 0 ? 'left' : 'right' );
       active     = ( self.state.openedTileIndex == index );
       divClass   = ( active ? 'active' : '' );
 
       col        = (
-        <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 bottom-margin-md text-center" key={ `tile-list-item-${index}` }>
+        <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 bottom-margin-md text-center" key={ `tile-list-item-${index}` }>
           <img
             src={ data.primaryImage }
             className={ `tile-primary-image ${divClass}` }
@@ -46,8 +48,8 @@ class InformationalTilesList extends React.Component {
       );
 
       bottom     = (
-        <div className="col-sm-12 col-md-12 col-lg-12">
-          <div className={ `tile-bottom-section ${divClass}` }>
+        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div className={ `tile-bottom-section ${divClass} ${side}` }>
 
           </div>
         </div>
@@ -78,7 +80,7 @@ class InformationalTilesList extends React.Component {
 
     return (
       <div className="row">
-        <div className="col-sm-12 col-md-12 col-lg-12">
+        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           { tiles }
         </div>
       </div>

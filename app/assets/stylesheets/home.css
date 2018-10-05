@@ -1,0 +1,28 @@
+.home-subheader {
+  color: #F5F5F5;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  padding-left: 3px;
+  font-size: 22px;
+}
+
+.home-header {
+  font-weight: 600;
+  font-family: 'Quicksand';
+  font-size: 35px;
+  color: #F5F5F5;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  margin-top: 90px;
+  line-height: 45px;
+}
+
+@media screen and (max-width: 600px) {
+  .home-header {
+    font-size: 25px;
+  }
+
+  .home-subheader {
+    font-size: 18px;
+  }
+}

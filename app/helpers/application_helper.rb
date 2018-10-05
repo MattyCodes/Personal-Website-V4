@@ -10,4 +10,14 @@ module ApplicationHelper
   def navbar_hidden?
     ( controller?('misc') && action?('thanks') ) || ( controller?('misc') && action?('contact') )
   end
+
+  def stylesheet_exists?(stylesheet)
+    stylesheet = "#{Rails.root}/app/assets/stylesheets/#{stylesheet}"
+    File.exists?("#{stylesheet}.scss") || File.exists?("#{stylesheet}.css")
+  end
+
+  def javascript_exists?(javascript)
+    javascript = "#{Rails.root}/app/assets/javascripts/#{javascript}"
+    File.exists?("#{javascript}.scss") || File.exists?("#{javascript}.css")
+  end
 end
