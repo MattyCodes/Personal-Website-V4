@@ -36,7 +36,6 @@ class InformationalTilesList extends React.Component {
       side       = ( index % 2 == 0 ? 'left' : 'right' );
       active     = ( self.state.openedTileIndex == index );
       divClass   = ( active ? 'active' : '' );
-
       col        = (
         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 no-padding no-margin text-center" key={ `tile-list-item-${index}` }>
           <div className="tile-overlay" onClick={ () => self.openTile(index) }>
@@ -53,7 +52,12 @@ class InformationalTilesList extends React.Component {
       bottom     = (
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div className={ `tile-bottom-section ${divClass} ${side}` }>
-
+            <h3 className="tile-bottom-header">
+              { data.title }
+            </h3>
+            <p className="tile-bottom-text">
+              { data.description }
+            </p>
           </div>
         </div>
       );
