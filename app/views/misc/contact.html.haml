@@ -1,0 +1,17 @@
+= render partial: 'layouts/navbar_background'
+.container
+  .row
+    .col-sm-12.col-md-12.col-lg-12.text-center.top-margin-sm.bottom-margin-lg
+      %h3.contact-header.margin-center.top-margin-sm.bottom-margin-lg Contact Me
+      = form_tag '/form_submission' do
+        .bottom-margin-sm
+          = label_tag :full_name, 'Full Name', class: 'form-label'
+          = text_field_tag :full_name, '', { class: 'text-input', placeholder: 'John Smith' }
+        .bottom-margin-sm
+          = label_tag :phone, 'Phone Number', class: 'form-label'
+          = text_field_tag :phone, '', { class: 'text-input', placeholder: '123-123-1234', type: 'number' }
+        .bottom-margin-sm
+          = label_tag :message, 'Message', class: 'form-label'
+          = text_area_tag :message, '', { class: 'text-input', placeholder: 'Type Your Message Here', rows: '4' }
+        .bottom-margin-sm
+          = submit_tag 'Submit', { class: 'submit-button' }

@@ -1,0 +1,19 @@
+.contact-header {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: #2f2f2f;
+  font-size: 40px;
+  letter-spacing: 0.25px;
+  word-spacing: 1px;
+  border-bottom: 3px solid #4dd1ac;
+  padding: 20px 45px;
+  width: fit-content;
+  text-shadow: 0px 0px 15px #00000014;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-header {
+    font-size: 30px;
+    padding: 15px 33px;
+  }
+}

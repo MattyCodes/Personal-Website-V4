@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def navbar_hidden?
-    ( controller?('misc') && action?('thanks') ) || ( controller?('misc') && action?('contact') )
+    controller?('misc') && action?('thanks')
   end
 
   def stylesheet_exists?(stylesheet)

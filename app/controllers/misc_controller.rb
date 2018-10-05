@@ -34,4 +34,11 @@ class MiscController < ApplicationController
       }
     ]
   end
+
+  def contact
+  end
+
+  def form_submission
+    byebug
+  end
 end
