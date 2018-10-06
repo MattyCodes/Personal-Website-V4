@@ -16,7 +16,7 @@
         .bottom-margin-sm
           = label_tag :message, 'Message', class: 'form-label'
           = text_area_tag :message, '', { class: 'text-input', placeholder: 'Type Your Message Here', rows: '4' }
-        .bottom-margin-sm.max-400.text-center.margin-center
+        .bottom-margin-sm.max-400.text-center.margin-center#google-recaptcha
           = recaptcha_tags
         - if params[:errors]
           .bottom-margin-sm.max-400.text-center.margin-center.bg-danger

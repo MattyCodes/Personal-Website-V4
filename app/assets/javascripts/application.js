@@ -13,6 +13,6 @@ $(document).ready(function() {
 
   // Prevent Google recaptcha scripts from being loaded multiple times.
   $(document).on('turbolinks:before-cache', function() {
-    if ( $('.g-recaptcha') && $('.g-recaptcha').length > 0 ) $('.g-recaptcha').empty();
+    if ( $('#google-recaptcha') && $('#google-recaptcha').length > 0 ) $('#google-recaptcha').empty();
   });
 });
