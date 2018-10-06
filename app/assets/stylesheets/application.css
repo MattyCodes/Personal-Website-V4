@@ -523,21 +523,38 @@ textarea.text-input {
   word-spacing: 1px;
   font-weight: 500;
 }
+
 .text-input::-moz-placeholder {
   color: #c0c0c0;
   letter-spacing: 0.5px;
   word-spacing: 1px;
   font-weight: 500;
 }
+
 .text-input:-ms-input-placeholder {
   color: #c0c0c0;
   letter-spacing: 0.5px;
   word-spacing: 1px;
   font-weight: 500;
 }
+
 .text-input:-moz-placeholder {
   color: #c0c0c0;
   letter-spacing: 0.5px;
   word-spacing: 1px;
   font-weight: 500;
+}
+
+.max-400 {
+  max-width: 400px;
+}
+
+.error-message {
+  background: #f2d1d1;
+  border: 2px solid #a86767;
+  border-radius: 5px;
+  color: #353535;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  padding: 15px 10px;
 }

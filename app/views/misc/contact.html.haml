@@ -1,7 +1,7 @@
 = render partial: 'layouts/navbar_background'
 .container
   .row
-    .col-sm-12.col-md-12.col-lg-12.text-center.top-margin-sm.bottom-margin-lg
+    .col-sm-12.col-md-12.col-lg-12.text-center.top-margin-sm.bottom-margin-lg.bottom-padding-lg
       %h3.contact-header.margin-center.top-margin-sm.bottom-margin-lg Contact Me
       = form_tag '/form_submission' do
         .bottom-margin-sm
@@ -9,9 +9,14 @@
           = text_field_tag :full_name, '', { class: 'text-input', placeholder: 'John Smith' }
         .bottom-margin-sm
           = label_tag :phone, 'Phone Number', class: 'form-label'
-          = text_field_tag :phone, '', { class: 'text-input', placeholder: '123-123-1234', type: 'number' }
+          = text_field_tag :phone, '', { class: 'text-input', placeholder: '123-123-1234' }
         .bottom-margin-sm
           = label_tag :message, 'Message', class: 'form-label'
           = text_area_tag :message, '', { class: 'text-input', placeholder: 'Type Your Message Here', rows: '4' }
-        .bottom-margin-sm
+        .bottom-margin-sm.max-400.text-center.margin-center
+          = recaptcha_tags
+        - if params[:errors]
+          .bottom-margin-sm.max-400.text-center.margin-center.bg-danger
+            %p.error-message Please make sure you've filled out your name, your message and the "I am not a robot" recaptcha.
+        .bottom-margin-sm.bottom-padding-lg
           = submit_tag 'Submit', { class: 'submit-button' }

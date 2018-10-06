@@ -13,7 +13,11 @@ class InformationalTilesList extends React.Component {
 
   openTile(index) {
     if ( index != this.state.openedTileIndex ) {
-      this.setState({ openedTileIndex: index });
+      this.setState({ openedTileIndex: index }, function() {
+        $('html, body').animate({
+          scrollTop: ( $('.tile-bottom-section').offset().top - 25 )
+        }, 700);
+      });
     } else {
       this.setState({ openedTileIndex: null });
     };
@@ -33,7 +37,6 @@ class InformationalTilesList extends React.Component {
     let col       = null;
 
     this.props.listData.map(function(data, index) {
-      side       = ( index % 2 == 0 ? 'left' : 'right' );
       active     = ( self.state.openedTileIndex == index );
       divClass   = ( active ? 'active' : '' );
       col        = (
@@ -51,7 +54,7 @@ class InformationalTilesList extends React.Component {
 
       bottom     = (
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div className={ `tile-bottom-section ${divClass} ${side}` }>
+          <div className={ `tile-bottom-section ${divClass}` }>
             <h3 className="tile-bottom-header">
               { data.title }
             </h3>
