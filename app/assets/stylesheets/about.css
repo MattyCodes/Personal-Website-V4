@@ -24,14 +24,14 @@
 
 @media screen and (max-width: 600px) {
   .about-header {
-    font-size: 30px;
+    font-size: 28px;
     padding: 15px 33px;
   }
 
   .about-text {
-    font-size: 18px;
-    line-height: 35px;
-    padding: 10px 30px;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 5px 15px;
   }
 }
 
@@ -79,6 +79,7 @@
 
   div.tile-bottom-section.active {
     height: 300px;
+    padding: 20px 0px;
   }
 
   .tile-overlay,
