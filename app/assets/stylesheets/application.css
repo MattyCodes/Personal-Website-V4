@@ -556,5 +556,7 @@ textarea.text-input {
   color: #353535;
   font-family: 'Quicksand', sans-serif;
   font-size: 18px;
+  line-height: 33px;
+  font-weight: 600;
   padding: 15px 10px;
 }
