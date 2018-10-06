@@ -1,9 +1,10 @@
 #thanks-container {
   height: 100%;
   min-height: 100vh;
-  background: linear-gradient( rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12) ), url('thanks_background.jpg');
+  background: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55) ), url('thanks_background.jpg');
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,5 +66,11 @@
   .thanks-subheader {
     margin-top: 10px;
     font-size: 20px;
+  }
+
+  .back-home-button {
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px 30px;
   }
 }
