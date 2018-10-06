@@ -74,3 +74,19 @@
     padding: 10px 30px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .thanks-header {
+    font-size: 22px;
+  }
+
+  .thanks-subheader {
+    margin-top: 8px;
+    font-size: 15px;
+  }
+
+  .back-home-button {
+    font-size: 15px;
+    margin-top: 15px;
+  }
+}
