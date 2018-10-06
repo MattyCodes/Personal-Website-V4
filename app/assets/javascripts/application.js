@@ -10,9 +10,9 @@ $(document).ready(function() {
       scrollTop: $('#scroll-to').offset().top
     }, 700);
   });
-});
 
-// Prevent Google recaptcha scripts from being loaded multiple times.
-document.addEventListener("turbolinks:before-cache", function() {
-   $('.g-recaptcha').empty();
+  // Prevent Google recaptcha scripts from being loaded multiple times.
+  $(document).on('turbolinks:before-cache', function() {
+    if ( $('.g-recaptcha') && $('.g-recaptcha').length > 0 ) $('.g-recaptcha').empty();
+  });
 });
