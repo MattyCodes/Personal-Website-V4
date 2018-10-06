@@ -41,9 +41,12 @@ class MiscController < ApplicationController
   def form_submission
     if verify_recaptcha && params[:full_name].present? && params[:message].present?
       # Send me an email and redirect...
-      redirect_to root_path
+      redirect_to thanks_path
     else
       redirect_to contact_path(errors: true)
     end
+  end
+
+  def thanks
   end
 end
