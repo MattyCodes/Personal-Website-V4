@@ -83,10 +83,10 @@ h5 {
 
 @media screen and (max-width: 767px) {
   .navbar-collapse {
-    margin-top: 14px;
+    margin-top: 12px;
     position: absolute;
-    left: 0px;
-    right: 0px;
+    left: -1px;
+    right: -1px;
     z-index: 50000;
   }
 }
@@ -97,21 +97,24 @@ h5 {
 
 @media screen and (max-width: 767px) {
   .navbar-collapse {
-    background: #b3ebd7;
+    background: #93e5c7;
+    border: 0;
   }
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #3c4745;
+  background-color: #FFFFFF;
 }
 
 .navbar-default .navbar-toggle {
-  background-color: #f2f7f4;
+  background-color: #0000001c;
   transition: all 300ms;
+  border: 2px solid #FFFFFF;
 }
 
-.navbar-default .navbar-toggle:hover {
-    background-color: #e6e7e6;
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:active {
+    background-color: #0000002b;
 }
 
 #background-tiles {
