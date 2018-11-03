@@ -113,7 +113,8 @@ h5 {
 }
 
 .navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:active {
+.navbar-default .navbar-toggle:active,
+.navbar-default .navbar-toggle:focus {
     background-color: #0000002b;
 }
 
