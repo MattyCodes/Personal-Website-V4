@@ -26,3 +26,4 @@
   %body
     = render partial: 'layouts/navbar' unless navbar_hidden?
     = yield
+    = render partial: 'layouts/footer' if show_footer?
