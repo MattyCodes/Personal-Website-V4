@@ -90,7 +90,7 @@ class InformationalTilesList extends React.Component {
 
     return (
       <div className="row">
-        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 bottom-margin-lg bottom-padding-lg">
           { tiles }
         </div>
       </div>

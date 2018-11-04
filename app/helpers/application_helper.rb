@@ -11,6 +11,10 @@ module ApplicationHelper
     controller?('misc') && action?('thanks')
   end
 
+  def show_footer?
+    controller?('misc') && ( action?('about') || action?('contact') )
+  end
+
   def stylesheet_exists?(stylesheet)
     stylesheet = "#{Rails.root}/app/assets/stylesheets/#{stylesheet}"
     File.exists?("#{stylesheet}.scss") || File.exists?("#{stylesheet}.css")

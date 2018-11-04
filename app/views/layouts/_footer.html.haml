@@ -1,0 +1,19 @@
+%footer
+  .container
+    .row
+      .col-xs-12.col-sm-6.col-md-6-col-lg-4.text-center
+        .contact-information
+          %p mattycodes.me@gmail.com
+          %p 678.906.9757
+      .col-xs-12.col-sm-6.col-md-6-col-lg-8.text-center
+        .social-links
+          .row.full-width
+            .col-xs-4.col-sm-4.col-md-4.col-lg-4
+              = link_to 'https://www.facebook.com/MattyFagioli', target: :_blank do
+                = image_tag 'facebook.png', class: 'social-link'
+            .col-xs-4.col-sm-4.col-md-4.col-lg-4
+              = link_to 'https://www.linkedin.com/in/mattycodes', target: :_blank do
+                = image_tag 'linkedin.png', class: 'social-link'
+            .col-xs-4.col-sm-4.col-md-4.col-lg-4
+              = link_to 'https://github.com/MattyCodes', target: :_blank do
+                = image_tag 'github.png', class: 'social-link'
