@@ -58,20 +58,32 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "PersonalWebsiteV4_#{Rails.env}"
+  
   config.action_mailer.perform_caching = false
 
-  ActionMailer::Base.delivery_method       = :smtp
+  ActionMailer::Base.delivery_method       = :sendmail
   ActionMailer::Base.perform_deliveries    = true
   ActionMailer::Base.raise_delivery_errors = false
-  ActionMailer::Base.smtp_settings         = {
+  ActionMailer::Base.sendmail_settings     = {
     :address              => "smtp.gmail.com",
-    :port                 => 587,
-    :domain               => 'gmail.com',
+    :port                 => "587",
+    :domain               => "gmail.com",
     :user_name            => ENV['FROM_ADDRESS'],
     :password             => ENV['FROM_ADDRESS_PASSWORD'],
-    :authentication       => 'plain',
+    :authentication       => "plain",
     :enable_starttls_auto => true
   }
+
+  # SMTP Settings:
+  # ActionMailer::Base.smtp_settings         = {
+  #   :address              => "smtp.gmail.com",
+  #   :port                 => 587,
+  #   :domain               => 'gmail.com',
+  #   :user_name            => ENV['FROM_ADDRESS'],
+  #   :password             => ENV['FROM_ADDRESS_PASSWORD'],
+  #   :authentication       => 'plain',
+  #   :enable_starttls_auto => true
+  # }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
