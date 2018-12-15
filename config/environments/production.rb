@@ -58,32 +58,20 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "PersonalWebsiteV4_#{Rails.env}"
-  
+
   config.action_mailer.perform_caching = false
 
-  ActionMailer::Base.delivery_method       = :sendmail
+  ActionMailer::Base.delivery_method       = :smtp
   ActionMailer::Base.perform_deliveries    = true
   ActionMailer::Base.raise_delivery_errors = false
-  ActionMailer::Base.sendmail_settings     = {
-    :address              => "smtp.gmail.com",
-    :port                 => "587",
-    :domain               => "gmail.com",
-    :user_name            => ENV['FROM_ADDRESS'],
-    :password             => ENV['FROM_ADDRESS_PASSWORD'],
-    :authentication       => "plain",
-    :enable_starttls_auto => true
+  ActionMailer::Base.smtp_settings         = {
+   :address => "smtp.gmail.com",
+   :port => 587,
+   :user_name => ENV['FROM_ADDRESS'],
+   :password => ENV['FROM_ADDRESS_PASSWORD'],
+   :authentication => :plain,
+   :enable_starttls_auto => true
   }
-
-  # SMTP Settings:
-  # ActionMailer::Base.smtp_settings         = {
-  #   :address              => "smtp.gmail.com",
-  #   :port                 => 587,
-  #   :domain               => 'gmail.com',
-  #   :user_name            => ENV['FROM_ADDRESS'],
-  #   :password             => ENV['FROM_ADDRESS_PASSWORD'],
-  #   :authentication       => 'plain',
-  #   :enable_starttls_auto => true
-  # }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -91,6 +79,7 @@ Rails.application.configure do
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
+  
   config.i18n.fallbacks = true
 
   # Send deprecation notices to registered listeners.
