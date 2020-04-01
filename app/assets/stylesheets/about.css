@@ -35,125 +35,13 @@
   }
 }
 
-.tile-overlay {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFF;
-  font-family: 'Lato', sans-serif;
-  font-size: 36px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  word-spacing: 1.5px;
-  background: #00000075;
-  text-shadow: 0px 0px 5px #3a3a3aa8;
-  opacity: 0;
-  transition: all 300ms;
-  cursor: pointer;
+.about-page-container {
+  min-height: 550px;
+  min-height: 90vh;
 }
 
-.tile-primary-image:hover + .tile-overlay,
-.tile-overlay:hover {
-  opacity: 1;
-}
-
-.tile-primary-image {
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
-  transition: all 300ms;
-  cursor: pointer;
-  box-shadow: 0px 0px 10px #00000014;
-  box-sizing: content-box;
-}
-
-@media screen and (max-width: 767px) {
-  .tile-primary-image {
-    height: 200px;
-  }
-
-  div.tile-bottom-section.active {
-    height: 300px;
-    padding: 20px 0px;
-  }
-
-  .tile-overlay,
-  .tile-overlay:hover {
-    font-size: 22px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .tile-primary-image {
-    height: 150px;
-  }
-
-  .tile-overlay,
-  .tile-overlay:hover {
-    font-size: 15px;
-  }
-}
-
-.tile-bottom-section {
-  margin: 0;
-  height: 0;
-  padding: 0;
-  border: 0;
-  box-shadow: none;
-  transition: all 350ms;
-  overflow: hidden;
-}
-
-.tile-bottom-section.active {
-  background: #ffffff36;
-  height: 400px;
-  overflow: auto;
-  border: 2px solid #9e9e9e;
-  box-shadow: 0px 5px 15px #0000001f;
-}
-
-.tile-bottom-header {
-  color: #202020;
-  font-weight: 600;
-  font-family: 'Quicksand', sans-serif;
-  letter-spacing: 0.5px;
-  word-spacing: 1px;
-  text-align: center;
-  font-size: 30px;
-  margin: 33px auto 15px auto;
-  text-shadow: 0px 0px 10px #0000001a;
-  white-space: nowrap;
-}
-
-.tile-bottom-text {
-  color: #202020;
-  font-weight: 500;
-  font-family: 'Quicksand', sans-serif;
-  letter-spacing: 0.5px;
-  word-spacing: 1px;
-  text-align: center;
-  font-size: 22px;
-  text-shadow: 0px 0px 10px #0000001a;
-  padding: 0px 25px;
-  line-height: 36px;
-  max-width: 715px;
-  margin: 0 auto;
-  padding-bottom: 22px;
-}
-
-@media screen and (max-width: 767px) {
-  .tile-bottom-header {
-    font-size: 25px;
-    margin: 20px auto 10px auto;
-  }
-
-  .tile-bottom-text {
-    font-size: 15px;
-    line-height: 27px;
+@media screen and (max-width: 500px) {
+  .about-page-container {
+    min-height: 80vh;
   }
 }

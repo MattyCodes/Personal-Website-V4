@@ -17,8 +17,8 @@ class ChangingWords extends React.Component {
   };
 
   runAnimation() {
-    let fullWord          = this.state.currentWord;
-    let currentValue      = this.state.currentValue;
+    let fullWord     = this.state.currentWord;
+    let currentValue = this.state.currentValue;
 
     if ( currentValue.length >= fullWord.length ) {
       this.removeLetters();
